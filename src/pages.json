@@ -1,7 +1,7 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
-			"path": "pages/home/home",
+			"path": "pages/home/Home",
 			"style": {
 				"navigationBarTextStyle": "white",
 				"navigationBarBackgroundColor": "#000000",
@@ -9,7 +9,7 @@
 			}
 		}
 	    ,{
-            "path" : "pages/search/search",
+            "path" : "pages/search/Search",
             "style" :                                                                                    
             {
                 "navigationBarTitleText": "",
@@ -18,7 +18,7 @@
             
         }
         ,{
-            "path" : "pages/horizontal/horizontal",
+            "path" : "pages/horizontal/Horizontal",
             "style" :                                                                                    
             {
                 "navigationBarTitleText": "",
@@ -27,7 +27,7 @@
             
         }
         ,{
-            "path" : "pages/mine/mine",
+            "path" : "pages/mine/Mine",
             "style" :                                                                                    
             {
                 "navigationBarTitleText": "",
@@ -36,7 +36,7 @@
             
         }
         ,{
-            "path" : "pages/video/video",
+            "path" : "pages/video/Video",
             "style" :                                                                                    
             {
                 "navigationBarTitleText": "",
@@ -44,6 +44,34 @@
             }
             
         }
+        ,{
+            "path" : "pages/album/Album",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "专辑详情",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/imgDetail/imgDetail",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        },
+		{
+		    "path" : "pages/demo/demo",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "左右滑动页面",
+		        "enablePullDownRefresh": false
+		    }
+		    
+		}
+        
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
@@ -57,27 +85,27 @@
 	    "borderStyle": "black",
 	    "backgroundColor": "#ffffff",
 	    "list": [{
-	        "pagePath": "pages/home/home",
+	        "pagePath": "pages/home/Home",
 	        "iconPath": "static/icon/_home.png",
 	        "selectedIconPath": "static/icon/home.png",
 	        "text": "首页"
 	    }, {
-	        "pagePath": "pages/horizontal/horizontal",
+	        "pagePath": "pages/horizontal/Horizontal",
 	        "iconPath": "static/icon/_img.png",
 	        "selectedIconPath": "static/icon/img.png",
 	        "text": "横屏"
 	    }, {
-	        "pagePath": "pages/video/video",
+	        "pagePath": "pages/video/Video",
 	        "iconPath": "static/icon/_videocamera.png",
 	        "selectedIconPath": "static/icon/videocamera.png",
 	        "text": "精美视频"
 	    }, {
-	        "pagePath": "pages/search/search",
+	        "pagePath": "pages/search/Search",
 	        "iconPath": "static/icon/_search.png",
 	        "selectedIconPath": "static/icon/search.png",
 	        "text": "搜索"
 	    }, {
-	        "pagePath": "pages/mine/mine",
+	        "pagePath": "pages/mine/Mine",
 	        "iconPath": "static/icon/_my.png",
 	        "selectedIconPath": "static/icon/my.png",
 	        "text": "我的"

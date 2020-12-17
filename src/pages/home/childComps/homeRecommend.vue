@@ -5,9 +5,12 @@
 			v-if="recommends.length > 0">
 		<!-- 热门推荐 -->
 		<view class="recommends">
-			<view class="recommend-wrap" v-for="recomm in recommends" :key="recomm.id">
+			<navigator class="recommend-wrap" hover-class="none"
+						v-for="recomm in recommends" 
+						:key="recomm.id"
+						:url="`../album/Album?id=${recomm.target}`">
 				<image :src="recomm.thumb" mode="widthFix"></image>
-			</view>
+			</navigator>
 		</view>
 		<!-- 月份 -->
 		<view class="monthes">
@@ -25,8 +28,10 @@
 			
 			<!-- 内容 -->
 			<view class="monthes-content">
-				<view class="monthes-list" v-for="mon in monthes.items" :key="mon._id">
-					<image :src="mon.thumb+mon.rule.replace('$<Height>',360)" mode="aspectFill"></image>
+				<view class="monthes-list" v-for="(mon,index) in monthes.items" :key="mon.id">
+					<go-detail :list="monthes.items" :index="index">
+						<image :src="mon.thumb+mon.rule.replace('$<Height>',360)" mode="aspectFill"></image>
+					</go-detail>
 				</view>
 			</view>
 		</view>
@@ -36,8 +41,10 @@
 				<text class="hot-title-text">热门</text>
 			</view>
 			<view class="hot-content">
-				<view class="hot-itme" v-for="hot in hots" :key="hot.id">
-					<image :src="hot.thumb" mode="widthFix"></image>
+				<view class="hot-itme" v-for="(hot,index) in hots" :key="hot.id">
+					<go-detail :list="hots" :index="index">
+						<image :src="hot.thumb" mode="widthFix"></image>
+					</go-detail>
 				</view>
 			</view>
 			<view class="hint" v-if="endMore">数据已加载完毕...</view>
@@ -47,7 +54,11 @@
 
 <script>
 	import moment from 'moment'
+	import goDetail from "@/components/goDetail";
 	export default{
+		components:{
+			goDetail
+		},
 		data(){
 			return{
 				recommends:[],
@@ -67,6 +78,9 @@
 		},
 		mounted() {
 			this.getList();
+			uni.setNavigationBarTitle({
+				title:"推荐"
+			})
 		},
 		methods:{
 			//发送请求获取数据
@@ -77,7 +91,7 @@
 				}).then(result=>{
 					if(result.res.vertical.length === 0){
 						this.hasMore = false;
-						this.endMore = false
+						this.endMore = true;
 						return;
 					}
 					if(this.recommends.length === 0){

@@ -36,10 +36,10 @@
 </template>
 
 <script>
-	import HomeAlbum from './homeAlbum/home-album.vue'
-	import HomeCategoty from './homeCategoty/home-categoty.vue'
-	import HomeNew from './homeNew/home-new.vue'
-	import HomeRecommend from './homeRecommend/homeRecommend.vue'
+	import HomeAlbum from './childComps/homeAlbum.vue'
+	import HomeCategoty from './childComps/homeCategoty.vue'
+	import HomeNew from './childComps/homeNew.vue'
+	import HomeRecommend from './childComps/homeRecommend.vue'
 	
 	import uniSegmentedControl from "@dcloudio/uni-ui/lib/uni-segmented-control/uni-segmented-control.vue";
 	export default {
@@ -58,7 +58,7 @@
 					{title:'最新'},
 					{title:'专辑'}
 				],
-				current: 0
+				current: 3
 			}
 		},
 		methods: {
