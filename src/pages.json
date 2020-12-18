@@ -72,6 +72,15 @@
 		    
 		}
         
+        ,{
+            "path" : "pages/imgCategory/imgCategory",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "分类图片",
+                "enablePullDownRefresh": false
+            }
+            
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
