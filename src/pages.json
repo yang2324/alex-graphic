@@ -7,41 +7,35 @@
 				"navigationBarBackgroundColor": "#000000",
 				"navigationBarTitleText": "图集"
 			}
-		}
-	    ,{
+		},
+		{
+		    "path" : "pages/video/Video",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "精美视频",
+		        "enablePullDownRefresh": false
+		    }
+		    
+		},
+	    {
             "path" : "pages/search/Search",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/horizontal/Horizontal",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
+                "navigationBarTitleText": "搜索",
                 "enablePullDownRefresh": false
             }
             
         }
         ,{
             "path" : "pages/mine/Mine",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/video/Video",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
+            "style" : {
+				"app-plus": {
+						"titleNView": false //禁用原生导航栏
+					},
+				"navigationBarTextStyle": "white",
+				"navigationBarTitleText": "我的",
+				"navigationBarBackgroundColor": "#ffd655"
+			}
             
         }
         ,{
@@ -57,7 +51,7 @@
             "path" : "pages/imgDetail/imgDetail",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "",
+                "navigationBarTitleText": "图片详情",
                 "enablePullDownRefresh": false
             }
             
@@ -81,6 +75,69 @@
             }
             
         }
+        ,{
+            "path" : "pages/VideoPlay/VideoPlay",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "视频播放",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/registLogin/registLogin",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/mineInfo/mineInfo",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "我的",
+                "enablePullDownRefresh": false
+            }
+            
+        },{
+            "path" : "pages/faceCrop/faceCrop",
+            "style" :                                                                                    
+            {
+                "navigationBarTextStyle" : "white",
+			    "navigationBarTitleText" : "头像剪裁",
+			    "navigationBarBackgroundColor" : "#000000"
+            }
+            
+        }
+        ,{
+            "path" : "pages/meNickname/meNickname",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "修改昵称",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/meBirthday/meBirthday",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "修改生日",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/meSex/meSex",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "修改性别",
+                "enablePullDownRefresh": false
+            }
+            
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
@@ -98,11 +155,6 @@
 	        "iconPath": "static/icon/_home.png",
 	        "selectedIconPath": "static/icon/home.png",
 	        "text": "首页"
-	    }, {
-	        "pagePath": "pages/horizontal/Horizontal",
-	        "iconPath": "static/icon/_img.png",
-	        "selectedIconPath": "static/icon/img.png",
-	        "text": "横屏"
 	    }, {
 	        "pagePath": "pages/video/Video",
 	        "iconPath": "static/icon/_videocamera.png",

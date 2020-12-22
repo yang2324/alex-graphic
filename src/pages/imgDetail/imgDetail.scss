@@ -6,6 +6,7 @@
     image {
       width: 88rpx;
       border-radius: 50%;
+	  height: 88rpx;
     }
   }
   .user_desc {
@@ -22,7 +23,11 @@
   }
 }
 .high_img {
-  border-bottom: 1rpx solid #eee;
+	border-bottom: 1rpx solid #eee;
+	image{
+		height: 600rpx;
+		width: 100%;
+	}
 }
 .user_rank {
   display: flex;

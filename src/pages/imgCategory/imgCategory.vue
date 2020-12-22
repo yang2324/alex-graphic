@@ -21,8 +21,10 @@
 				enable-flex 
 				class="category-content"
 				@scrolltolower="handleTolower">
-			<view class="category-item" v-for="item in vertical" :key="item.id">
-				<image :src="item.thumb" mode="widthFix"></image>
+			<view class="category-item" v-for="(item,index) in vertical" :key="item.id">
+				<go-detail :list="vertical" :index="index">
+					<image :src="item.thumb" mode="widthFix"></image>
+				</go-detail>
 			</view>
 		</scroll-view>
 	</view>
@@ -30,9 +32,11 @@
 
 <script>
 	import uniSegmentedControl from "@dcloudio/uni-ui/lib/uni-segmented-control/uni-segmented-control.vue";
+	import goDetail from "@/components/goDetail";
 	export default {
 		components:{
-			uniSegmentedControl
+			uniSegmentedControl,
+			goDetail
 		},
 		data() {
 			return {

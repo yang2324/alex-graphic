@@ -8,7 +8,6 @@ export default (params)=>{
 	return new Promise((resolve,reject)=>{
 		uni.request({
 			...params,
-			method:"GET",
 			success(res) {
 				resolve(res.data)
 			},

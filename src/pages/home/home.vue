@@ -58,7 +58,7 @@
 					{title:'最新'},
 					{title:'专辑'}
 				],
-				current: 1
+				current: 0
 			}
 		},
 		methods: {

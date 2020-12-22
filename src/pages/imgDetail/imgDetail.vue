@@ -14,7 +14,7 @@
 		<!-- 大图 -->
 		<view class="high_img">
 			<swiper-action @swiperAction="handleSwiperAction">
-				<image mode="widthFix" :src="imgDetail.thumb"></image>
+				<image mode="aspectFill" :src="imgDetail.thumb"></image>
 			</swiper-action>
 		</view>
 		<!-- 点赞 -->

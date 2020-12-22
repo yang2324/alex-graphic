@@ -37,7 +37,7 @@
 				}
 				let direction = "";
 				//判断滑动的距离是否合法			绝对值
-				if(Math.abs(endX - this.startX)>10&&Math.abs(endY-this.startY<10)){
+				if(Math.abs(endX - this.startX)>10 && Math.abs(endY-this.startY)<20){
 					direction = endX-this.startX >0?"right":"left"
 				}else{
 					return;

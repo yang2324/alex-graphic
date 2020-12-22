@@ -1,6 +1,6 @@
 <template>
 	<view class="page">
-		
+		横屏
 	</view>
 </template>
 
